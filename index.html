@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <header class="main-container">
+        <nav class="main-inner-container">
+          <div>
+            <img
+              src="./img/TestLogo.svg"
+              alt="TestLogo.svg"
+              class="imge-size"
+            />
+          </div>
+          <div class="ul-list">
+            <ul>
+              <li>
+                <a href="#"
+                  ><span
+                    ><img
+                      src="./img/home_FILL0_wght300_GRAD0_opsz24.svg"
+                      alt=""
+                    />Overview</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a href="#" class="active"
+                  ><span
+                    ><img
+                      src="./img/group_FILL0_wght300_GRAD0_opsz24.svg"
+                      alt=""
+                    />Patients</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><span
+                    ><img
+                      src="./img/calendar_today_FILL0_wght300_GRAD0_opsz24.svg"
+                      alt=""
+                    />Schedule</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><span
+                    ><img
+                      src="./img/chat_bubble_FILL0_wght300_GRAD0_opsz24.svg"
+                      alt=""
+                    />Message</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><span
+                    ><img
+                      src="./img/credit_card_FILL0_wght300_GRAD0_opsz24.svg"
+                      alt=""
+                    />Transactions</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="nav-user-details">
+            <div class="nav-user-details-inner">
+              <img
+                src="./img/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc.png"
+                alt="rrr"
+              />
+              <div class="nav-user-details-inner-p">
+                <p>Dr. Jose Simmons</p>
+                <p>General Practitioner</p>
+              </div>
+            </div>
+            <div class="seetingicons">
+              <img src="./img/settings_FILL0_wght300_GRAD0_opsz24.png" alt="" />
+              <img
+                src="./img/more_vert_FILL0_wght300_GRAD0_opsz24.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section class="section-container">
+        <div class="div-1">
+          <div class="inner-div-1">
+            <h1>Patients</h1>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="user-list-container">
+            <ul class="user-list">
+              <li class="user-item"></li>
+              <!-- Repeat the user-item block for more users -->
+            </ul>
+          </div>
+        </div>
+        <div class="div-2">
+          <div>
+            <h1>Diagnosis History</h1>
+            <div class="inner-div-2">
+              <div class="charset">
+                <canvas
+                  id="myChart"
+                  style="width: 100%; max-width: 600px"
+                ></canvas>
+              </div>
+            </div>
+            <div class="user-diagram">
+              <div class="user-diagram-1">
+                <img src="./img/HeartBPM.png" alt="" />
+                <h1>Respiratory Rate</h1>
+                <p>{}</p>
+                <h2>{}</h2>
+              </div>
+              <div class="user-diagram-2">
+                <img src="./img/temperature.png" alt="" />
+                <h1>Temperature</h1>
+                <p>{}</p>
+                <h2>{}</h2>
+              </div>
+              <div class="user-diagram-3">
+                <img src="./img/HeartBPM.png" alt="" />
+                <h1>Heart Rate</h1>
+                <p>{}</p>
+                <h2>{}</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="div-3">
+          <img src="" alt="" />
+          <div>
+            <h1>{}</h1>
+            <div class="div-3-contact">
+              <img src="./img/BirthIcon.png" alt="" />
+              <div class="date-of-birth">
+                <p>Date Of Birth</p>
+                <h6>{}</h6>
+              </div>
+            </div>
+            <div class="div-3-contact">
+              <img src="./img/FemaleIcon.png" alt="" />
+              <div>
+                <p>Gender</p>
+                <h2>{}</h2>
+              </div>
+            </div>
+            <div class="div-3-contact">
+              <img src="./img/PhoneIcon.png" alt="" />
+              <div>
+                <p>Contact Info.</p>
+                <h5>{}</h5>
+              </div>
+            </div>
+            <div class="div-3-contact">
+              <img src="./img/PhoneIcon.png" alt="" />
+              <div class="Emergency">
+                <p>Emergency Contacts</p>
+                <h2>{}</h2>
+              </div>
+            </div>
+            <div class="div-3-contact">
+              <img src="./img/InsuranceIcon.png" alt="" />
+              <div class="Insurance">
+                <p>Insurance Provider</p>
+                <h2>{}</h2>
+              </div>
+            </div>
+            <div class="div-3-contact">
+              <button>Show All Information</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="Diagnosis-list1 grid1">
+          <h2>Diagnostic List</h2>
+          <div>
+            <div>
+              <div class="Diagnosis-list1-inner">
+                <span>Problem/Diagnosis</span>
+                <span>Description</span>
+                <span>Status</span>
+              </div>
+              <div class="Diagnosis-list1-inner">
+                <h6>{}</h6>
+                <span>{}</span>
+                <span>{}</span>
+              </div>
+              <div class="Diagnosis-list1-inner">
+                <span>{}</span>
+                <span>{}</span>
+                <span>{}</span>
+              </div>
+              <div class="Diagnosis-list1-inner">
+                <span>{}</span>
+                <span>{}</span>
+                <span>{}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Diagnosis-list2">
+          <div class="lab-result">
+            <h2>Lab Results</h2>
+            <ul>
+              <li class="lab-results">
+                {}
+                <a href="#"
+                  ><img
+                    src="./img/download_FILL0_wght300_GRAD0_opsz24 (1).png"
+                    alt=""
+                /></a>
+              </li>
+              <li class="lab-results">
+                { }
+                <a href="#"
+                  ><img
+                    src="./img/download_FILL0_wght300_GRAD0_opsz24 (1).png"
+                    alt=""
+                /></a>
+              </li>
+              <li class="lab-results">
+                {}
+                <a href="#"
+                  ><img
+                    src="./img/download_FILL0_wght300_GRAD0_opsz24 (1).png"
+                    alt=""
+                /></a>
+              </li>
+              <li class="lab-results">
+                {}
+                <a href="#"
+                  ><img
+                    src="./img/download_FILL0_wght300_GRAD0_opsz24 (1).png"
+                    alt=""
+                /></a>
+              </li>
+              <li class="lab-results">
+                {}
+                <a href="#"
+                  ><img
+                    src="./img/download_FILL0_wght300_GRAD0_opsz24 (1).png"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="javascipt.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>
